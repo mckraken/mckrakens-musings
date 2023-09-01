@@ -1,4 +1,4 @@
-# Awesome Elastic Engineering Development Environment
+# Development Environment
 SHELL=/bin/bash
 
 # Visual Studio devcontainers
@@ -19,7 +19,7 @@ build:
 	poetry run mkdocs build
 
 lint:
-	@poetry run ./scripts/markdown-lint.sh || true
+	@poetry run pymarkdownlnt -c .pymarkdown-linting-cfg.json scan --recurse docs
 
 serve:
 	poetry run mkdocs serve

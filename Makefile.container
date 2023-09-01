@@ -1,4 +1,4 @@
-# Awesome Elastic Engineering Development Environment
+# Dev Environment
 SHELL=/bin/bash
 
 # Visual Studio devcontainers
@@ -6,7 +6,7 @@ build:
 	mkdocs build
 
 lint:
-	@./scripts/markdown-lint.sh
+	@pymarkdownlnt -c .pymarkdown-linting-cfg.json scan --recurse docs
 
 serve:
 	mkdocs serve

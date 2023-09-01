@@ -1,36 +1,29 @@
 ---
-title: Contributing to the Documentation
+title: Documentation with mkdocs
 authors:
-    - Steve McCracken
+    - McKraken
 date: 21-Mar-2023
 version: 0.1
-rxt:
-    py_version: v3.10
+mck:
+    py_version: v3.11
+tags:
+    - mkdocs
 ---
-
-## Contributing Guidelines
-
-Thank you for investing your time in contributing to the documentation :sparkles:.
-
-### Code of Conduct
-
-Maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, issues, and other contributions that do not materially add to the improvement or are not professional and will communicate reasons for moderation
-decisions when appropriate.
 
 ## Local Development
 
-A local environment should be configured to enable linting and building `mkdocs`[^mkdocs] locally. This enables Elastic Engineering engineers to test their changes locally before committing to a remote branch.
+A local environment should be configured to enable linting and building `mkdocs`[^mkdocs] locally. This enables testing changes locally before committing to a remote branch.
 
 ### Prerequisites
 
 #### Python
 
-1. This is currently using Python {{ rxt.py_version }}.   A working `pyenv` installation is a good way to set this up.[^pyenv]
+1. This is currently using Python {{ mck.py_version }}.   A working `pyenv` installation is a good way to set this up.[^pyenv]
 2. A working installation of Poetry for Python dependency management.[^poetry]
 
 #### Clone Repository
 
-1. Clone this repository to your local machine by running:
+1. Clone the repository to your local machine by running:
   
     ``` bash
     git clone **REPO_URL**
@@ -42,12 +35,9 @@ A local environment should be configured to enable linting and building `mkdocs`
 2. Navigate to **REPO NAME** repository to the `docs/` sub-folder.
 
     !!! note
-        There are two levels of "docs" folders in the repo.  The first level is the base of the documentation area
-        where `mkdocs` is run and the mkdocs.yml file lives.  The second level docs/ folder under this documentation
-        area is where the actual documentation files live that are used to generate the static pages for the
-        documentation site.
+        There might be two levels of "docs" folders in the repo.  The first level is the base of the documentation area where `mkdocs` is run and the mkdocs.yml file lives.  The second level docs/ folder under this is where the actual documentation files live that are used to generate the static pages for the documentation site.
 
-3. Run `poetry install` or `make install` to install the required Python packages in the poetry environment.
+3. Run `poetry install` or `make install` to install the required Python packages in the poetry environment while located in the directory where the pyproject.toml file is.
 4. (Optional) Run `poetry shell` to activate the poetry virtual environment.
 
     !!! tip
@@ -60,10 +50,10 @@ A local environment should be configured to enable linting and building `mkdocs`
 
 5. Create and checkout a new branch.
 6. Edit or create any documentation as needed in the second level `docs` folder.
-7. Run `./scripts/markdown-lint.sh` or `make lint` to lint the markdown, and make changes where necessary.
+7. Run `pymarkdownlnt -c .pymarkdown-linting-cfg.json scan --recurse docs` (referencing the correct path to the linting configuration file) or `make lint` to lint the markdown, and make changes where necessary.
 
     !!!info
-        Details for Markdown rules can be found [here](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md). If rules need to be ignored, update the `linting-cfg.json` file in the `/scripts` directory.
+        Details for Markdown rules can be found [here](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md). If rules need to be ignored, update the linting configuration file.
 
 8. Run `mkdocs serve` or `make serve` to run the mkdocs site locally and confirm the changes.
 9. Push your changes to your branch on Github.

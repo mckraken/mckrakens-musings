@@ -1,5 +1,5 @@
 ---
-title: Musings
+title: McKraken's Musings
 summary: Documentation Home Page
 cust_website: https://www.site.com/
 authors:

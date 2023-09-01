@@ -1,9 +1,9 @@
-site_name: McKraken's Docs
+site_name: McKraken's Musings
 site_description: Documentation Site
 site_author: "McKraken"
-site_url: https://pages.github.io/mckraken/probable-potato/
-repo_name: mckraken/probable-potato
-repo_url: https://github.com/mckraken/probable-potato
+site_url: https://pages.github.io/mckraken/mckrakens-musings/
+repo_name: mckraken/mckrakens-musings
+repo_url: https://github.com/mckraken/mckrakens-musings
 # EDIT LINES ABOVE THIS ONE FOR A NEW REPOSITORY
 edit_uri: "edit/main/docs/"
 docs_dir: docs
@@ -53,7 +53,7 @@ nav:
   - ...
   - General:
       - Tag Index: general/tags.md
-      - Contributing: general/contributing.md
+      # - Contributing: general/contributing.md
 
 markdown_extensions:
   - admonition
