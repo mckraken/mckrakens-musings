@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "FiraSans-Regular";
+    src: "assets/fonts";
+}
+
+/* [data-md-color-scheme="elastic-engineering-light"] {
+    --md-primary-fg-color:#eb0000;
+    --md-typeset-a-color:#eb0000;
+    --md-accent-fg-color: #eb0000;
+    --md-text-font: "FiraSans-Regular";
+} */
+
+[data-md-color-scheme="elastic-engineering-light"] {
+    --md-primary-fg-color:#002beb;
+    --md-typeset-a-color:#002beb;
+    --md-accent-fg-color: #002beb;
+    --md-text-font: "FiraSans-Regular";
+}
+
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color:#005de0;
+    --md-typeset-a-color: #005de0;
+    --md-accent-fg-color: #005de0;
+    --md-hue: 225;
+    --md-text-font: "FiraSans-Regular";
+}

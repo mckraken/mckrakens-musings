@@ -1,0 +1,85 @@
+site_name: McKraken's Docs
+site_description: Documentation Site
+site_author: "McKraken"
+site_url: https://pages.github.io/mckraken/probable-potato/
+repo_name: mckraken/probable-potato
+repo_url: https://github.com/mckraken/probable-potato
+# EDIT LINES ABOVE THIS ONE FOR A NEW REPOSITORY
+edit_uri: "edit/main/docs/"
+docs_dir: docs
+site_dir: site
+remote_branch: gh-pages
+
+plugins:
+  - search
+  - awesome-pages
+  - macros
+  - git-revision-date-localized
+  - mkdocs-video
+  - tags:
+      tags_file: general/tags.md
+
+theme:
+  name: material
+  language: en
+  features:
+    - search.highlight
+    - search.share
+    - content.code.annotate
+    - navigation.top
+    - navigation.indexes
+    - content.action.edit
+  palette:
+    - scheme: elastic-engineering-light
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  #logo: "https://c0e9a73362c5d06f19d6-b39ff74cb91d713ac1253c5ae00eaccb.ssl.cf1.rackcdn.com/UI/logos/PNG/Rackspace_Icon_wt.png"
+  #favicon: "https://c0e9a73362c5d06f19d6-b39ff74cb91d713ac1253c5ae00eaccb.ssl.cf1.rackcdn.com/UI/favicon/favicon.ico"
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    admonition:
+      quote: material/code-tags
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - ...
+  - General:
+      - Tag Index: general/tags.md
+      - Contributing: general/contributing.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - meta
+  - footnotes
+  # - def_list
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.tasklist:
+      clickable_checkbox: false
+      custom_checkbox: true

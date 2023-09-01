@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "pod-docs"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+# packages = [{include = "pod-docs"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+boto3 = ">=1.26.89"
+mkdocs = ">=1.5"
+mkdocs-material = ">=9.0.11"
+mkdocs-git-revision-date-localized-plugin = ">=1.1.0"
+pymarkdownlnt = ">=0.9.8"
+invoke = ">=2.0.0"
+mkdocs-macros-plugin = ">=0.7.0"
+mkdocs-awesome-pages-plugin = ">=2.8.0"
+mkdocs-video = ">=1.5"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = ">=3.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

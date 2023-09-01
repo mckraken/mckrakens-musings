@@ -1,0 +1,15 @@
+# Awesome Elastic Engineering Development Environment
+SHELL=/bin/bash
+
+# Visual Studio devcontainers
+build:
+	mkdocs build
+
+lint:
+	@./scripts/markdown-lint.sh
+
+serve:
+	mkdocs serve
+
+check:
+	pre-commit run --all-files

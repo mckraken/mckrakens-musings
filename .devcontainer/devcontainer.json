@@ -1,0 +1,36 @@
+{
+  "name": "Python 3.11",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      "VARIANT": "3.11",
+      "NODE_VERSION": "none"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+				"python.analysis.typeCheckingMode": "basic"
+        }
+      },
+    "extensions": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "aws-scripting-guy.cform",
+      "hashicorp.terraform",
+      "redhat.vscode-yaml",
+      "esbenp.prettier-vscode",
+      "kddejong.vscode-cfn-lint",
+      "hashicorp.terraform",
+      "yzhang.markdown-all-in-one",
+      "davidanson.vscode-markdownlint",
+      "rlnt.keep-a-changelog"
+    ]
+  },
+  "mounts": [
+		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+	],
+  "remoteUser": "vscode",
+  "postAttachCommand": "pre-commit install --install-hooks"
+}
