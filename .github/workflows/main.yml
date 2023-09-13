@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: set up python
         uses: actions/setup-python@v4
         id: setuppythonstep

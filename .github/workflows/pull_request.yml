@@ -20,6 +20,7 @@ jobs:
           cache: pip
           cache-dependency-path: "requirements.txt"
       - run: echo '${{ steps.setuppythonstep.outputs.python-version }}'
-      - run: pip install -r requirements.txt
+      - run: pip install pymarkdownlnt pre-commit
+      - run: pre-commit install --install-hooks -f
       - run: pymarkdownlnt -c .pymarkdown-linting-cfg.json scan --recurse docs
       - run: pre-commit run --all-files
