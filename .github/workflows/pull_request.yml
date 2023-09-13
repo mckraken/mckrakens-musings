@@ -1,0 +1,25 @@
+name: build
+on:
+  pull_request:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  lint:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: check out repository
+        uses: actions/checkout@v3
+      - name: set up python
+        uses: actions/setup-python@v4
+        id: setuppythonstep
+        with:
+          python-version-file: ".python-version"
+          check-latest: true
+          cache: pip
+          cache-dependency-path: "requirements.txt"
+      - run: echo '${{ steps.setuppythonstep.outputs.python-version }}'
+      - run: pip install -r requirements.txt
+      - run: pymarkdownlnt -c .pymarkdown-linting-cfg.json scan --recurse docs
+      - run: pre-commit run --all-files
