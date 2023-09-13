@@ -24,7 +24,7 @@ jobs:
       - run: pymarkdownlnt -c .pymarkdown-linting-cfg.json scan --recurse docs
       - run: pre-commit run --all-files
       - run: mkdocs build
-      - run: mkdocs gh-deploy -f
+      - run: mkdocs gh-deploy --force
 
   # deploy:
   #   needs: lint
