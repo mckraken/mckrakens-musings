@@ -1,0 +1,13 @@
+[flake8]
+max-line-length = 99
+require-plugins =
+   flake8-docstrings
+   flake8-use-fstring
+   flake8-print
+   flake8-isort
+   flake8-eradicate
+   flake8-bugbear
+   flake8-builtins
+   flake8-comprehensions
+   flake8-todos
+   # flake8-length

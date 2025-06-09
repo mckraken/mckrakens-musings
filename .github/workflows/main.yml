@@ -6,15 +6,15 @@ on:
 permissions:
   contents: write
 jobs:
-  check_n_deploy:
-    runs-on: ubuntu-22.04
+  deploy_docs:
+    runs-on: ubuntu-latest
     steps:
       - name: check out repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: set up python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         id: setuppythonstep
         with:
           python-version-file: ".python-version"
@@ -23,28 +23,4 @@ jobs:
           cache-dependency-path: "requirements.txt"
       - run: echo '${{ steps.setuppythonstep.outputs.python-version }}'
       - run: pip install -r requirements.txt
-      - run: pymarkdownlnt -c .pymarkdown-linting-cfg.json scan --recurse docs
-      - run: pre-commit run --all-files
-      - run: mkdocs build
-      - run: mkdocs gh-deploy --force
-
-  # deploy:
-  #   needs: lint
-  #   runs-on: ubuntu-22.04
-  #   steps:
-  #     - name: check out repository
-  #       uses: actions/checkout@v3
-  #     - name: set up python
-  #       uses: actions/setup-python@v4
-  #       id: setuppythonstep
-  #       with:
-  #         python-version-file: ".python-version"
-  #         check-latest: true
-  #         cache: pip
-  #         cache-dependency-path: "requirements.txt"
-  #     - run: echo '${{ steps.setuppythonstep.outputs.python-version }}'
-  #     - run: pip install -r requirements.txt
-  #     - run: pymarkdownlnt -c .pymarkdown-linting-cfg.json scan --recurse docs
-  #     - run: pre-commit run --all-files
-  #     - run: mkdocs build
-  #     - run: mkdocs gh-deploy -f
+      - run: mkdocs gh-deploy -f mkdocs.yml --force

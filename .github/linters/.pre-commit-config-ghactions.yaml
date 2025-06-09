@@ -55,42 +55,16 @@ repos:
     rev: v0.1.29
     hooks:
       - id: terraform-fmt
-      - id: terraform-validate
       - id: tflint
+      - id: terraform-validate
       # - id: shellcheck
       # - id: gofmt
       # - id: golint
-
-  # - repo: git://github.com/antonbabenko/pre-commit-terraform
-  #   rev: v1.97.3
-  #   hooks:
-  #     - id: checkov
-  #     # - id: terraform_tfsec
-  #     # - id: terraform_docs
-
-  - repo: https://github.com/bridgecrewio/checkov.git
-    rev: 3.2.438
-    hooks:
-      - id: checkov
-        args:
-          - --quiet
-          - --compact
-          # - --soft-fail
-          # - id: checkov_container
-          # - id: checkov_diff
-          # - id: checkov_diff_container
-          # - id: checkov_secrets
-          # - id: checkov_secrets_container
 
   - repo: https://github.com/PyCQA/isort
     rev: 6.0.1
     hooks:
       - id: isort
-
-  # - repo: https://github.com/psf/black
-  #   rev: 25.1.0
-  #   hooks:
-  #     - id: black
 
   - repo: https://github.com/aws-cloudformation/cfn-lint
     rev: v1.35.4 # The version of cfn-lint to use
@@ -115,7 +89,6 @@ repos:
           - flake8-builtins
           - flake8-comprehensions
           - flake8-todos
-          # - flake8-length
 
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.37.1
@@ -155,17 +128,3 @@ repos:
         args:
           - --config=.pymarkdown-linting-cfg.json
           - scan
-
-  - repo: https://github.com/python-poetry/poetry
-    rev: "2.1.3"
-    hooks:
-      - id: poetry-check
-      # - id: poetry-lock
-
-  - repo: https://github.com/python-poetry/poetry-plugin-export
-    rev: "1.9.0"
-    hooks:
-      - id: poetry-export
-        args:
-          ["--with", "dev", "-f", "requirements.txt", "-o", "requirements.txt"]
-        verbose: true

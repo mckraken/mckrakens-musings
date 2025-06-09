@@ -6,13 +6,15 @@ on:
 permissions:
   contents: write
 jobs:
-  lint:
-    runs-on: ubuntu-22.04
+  lint-n-build-docs:
+    runs-on: ubuntu-latest
     steps:
       - name: check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: set up python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         id: setuppythonstep
         with:
           python-version-file: ".python-version"
@@ -20,7 +22,56 @@ jobs:
           cache: pip
           cache-dependency-path: "requirements.txt"
       - run: echo '${{ steps.setuppythonstep.outputs.python-version }}'
-      - run: pip install pymarkdownlnt pre-commit
-      - run: pre-commit install --install-hooks -f
+      - run: pip install -r requirements.txt
       - run: pymarkdownlnt -c .pymarkdown-linting-cfg.json scan --recurse docs
-      - run: pre-commit run --all-files
+      - name: cache tf installs
+        id: cache-tf
+        uses: actions/cache@v4
+        with:
+          key: tenv-tofu-tf||${{ hashFiles('.terraform-version', '.opentofu-version') }}
+          path: |
+            /usr/bin/terraform
+            /usr/bin/tofu
+            /usr/bin/tenv
+      - name: Set up tenv
+        if: ${{ steps.cache-tf.outputs.cache-hit != 'true' }}
+        run: |
+          TENV_VERSION=$(curl --silent https://api.github.com/repos/tofuutils/tenv/releases/latest | jq -r .tag_name) && \
+          MACH_ARCH=$(dpkg --print-architecture) && \
+          echo ${MACH_ARCH} && \
+          curl -O -L "https://github.com/tofuutils/tenv/releases/download/${TENV_VERSION}/tenv_${TENV_VERSION}_${MACH_ARCH}.deb" && \
+          sudo dpkg -i "tenv_${TENV_VERSION}_${MACH_ARCH}.deb"
+      - name: Set up TOFU and TF
+        if: ${{ steps.cache-tf.outputs.cache-hit != 'true' }}
+        run: tenv tofu install && tenv tf install
+
+      # - uses: actions/cache@v4
+      #   name: Cache plugin dir
+      #   with:
+      #     path: ~/.tflint.d/plugins
+      #     key: ${{ matrix.os }}-tflint-${{ hashFiles('.tflint.hcl') }}
+
+      - uses: terraform-linters/setup-tflint@v4
+        name: Setup TFLint
+        with:
+          tflint_version: v0.52.0
+      - name: Show version
+        run: tflint --version
+
+      - name: Init TFLint
+        run: tflint --init
+        env:
+          # https://github.com/terraform-linters/tflint/blob/master/docs/user-guide/plugins.md#avoiding-rate-limiting
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: cache pre-commit installs
+        id: cache-precommit
+        uses: actions/cache@v4
+        with:
+          # yamllint disable rule:line-length
+          key: pre-commit-4|${{ env.pythonLocation }}|${{ hashFiles('.github/linters/.pre-commit-config-ghactions.yaml') }}
+          path: |
+            ~/.cache/pre-commit
+      - name: Run pre-commit
+        run: pre-commit run -a -c .github/linters/.pre-commit-config-ghactions.yaml
+      - run: mkdocs build -f mkdocs.yml

@@ -1,0 +1,32 @@
+FLAVOR_SUGGESTIONS: true
+FORMATTERS_DISABLE_ERRORS: false
+PRE_COMMANDS:
+  # yamllint disable rule:line-length
+  - command: pip install flake8-docstrings flake8-use-fstring flake8-print flake8-isort flake8-eradicate flake8-bugbear flake8-builtins flake8-comprehensions flake8-todos
+    venv: flake8 # Will be run within flake8 python virtualenv. There is one virtualenv per python-based linter, with the same name
+ENABLE_LINTERS:
+  - REPOSITORY_CHECKOV
+  - CLOUDFORMATION_CFN_LINT
+  - MARKDOWN_MARKDOWNLINT
+  - PYTHON_RUFF_FORMAT
+  - PYTHON_RUFF
+  # - PYTHON_BLACK
+  - PYTHON_PYLINT
+  - PYTHON_FLAKE8
+  - TERRAFORM_TERRAFORM_FMT
+  - TERRAFORM_TFLINT
+  - JSON_JSONLINT
+  - JSON_PRETTIER
+  - YAML_YAMLLINT
+  - YAML_PRETTIER
+CLOUDFORMATION_CFN_LINT_FILE_EXTENSIONS:
+  - .yml
+  - .yaml
+  - .json
+  - .template
+# CLOUDFORMATION_CFN_LINT_FILE_NAMES_REGEX:
+# - ^cfn-.*\.yml,
+# - ^cfn-.*\.yaml,
+# - ^cfn-.*\.json,
+# - ^cfn-.*\.template
+CLOUDFORMATION_CFN_LINT_FILTER_REGEX_INCLUDE: .*/cfn-.*

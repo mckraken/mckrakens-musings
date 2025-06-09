@@ -1,13 +1,17 @@
-[tool.poetry]
-name = "pod-docs"
-version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+[project]
+name = "podc-docs"
+dynamic = ["version", "dependencies"]
+description = "Documentation Repository for Pod C"
+authors = [{name = "EE Pod C", email =  "ee-pod-c@rackspace.com"}]
 readme = "README.md"
-# packages = [{include = "pod-docs"}]
+requires-python = ">=3.13"
+
+[tool.poetry]
+version = "0.1.0"
+package-mode = false
 
 [tool.poetry.dependencies]
-python = ">=3.10"
+python = ">=3.13, <4.0"
 boto3 = ">=1.26.89"
 mkdocs = ">=1.5"
 mkdocs-material = ">=9.0.11"
@@ -16,11 +20,24 @@ pymarkdownlnt = ">=0.9.8"
 invoke = ">=2.0.0"
 mkdocs-macros-plugin = ">=0.7.0"
 mkdocs-awesome-pages-plugin = ">=2.8.0"
-mkdocs-video = ">=1.5"
-
+mkdocs-git-authors-plugin = ">=0.7.2"
+cfn-lint = ">=1.4.2"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = ">=3.3.3"
+poetry-plugin-export = ">=1.8"
+black = "^24.10.0"
+pylint = "^3.3.4"
+flake8 = "^7.1.1"
+flake8-bugbear = "^24.12.12"
+flake8-builtins = "^2.5.0"
+flake8-comprehensions = "^3.16.0"
+flake8-docstrings = "^1.7.0"
+flake8-eradicate = "^1.5.0"
+flake8-isort = "^6.1.2"
+flake8-print = "^5.0.0"
+flake8-todos = "^0.3.1"
+flake8-use-fstring = "^1.4"
 
 [build-system]
 requires = ["poetry-core"]

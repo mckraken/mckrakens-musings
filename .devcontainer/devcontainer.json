@@ -1,36 +1,55 @@
 {
-  "name": "Python 3.11",
+  "name": "doc-container",
   "build": {
     "dockerfile": "Dockerfile",
-    "context": "..",
     "args": {
-      "VARIANT": "3.11",
-      "NODE_VERSION": "none"
-    }
+      "BUILDKIT_INLINE_CACHE": "0"
+    },
+    "context": ".."
   },
   "customizations": {
     "vscode": {
       "settings": {
-				"python.analysis.typeCheckingMode": "basic"
-        }
+        "python.analysis.typeCheckingMode": "basic",
+        "yaml.customTags": [
+          "!Base64 scalar",
+          "!Cidr scalar",
+          "!And sequence",
+          "!Equals sequence",
+          "!If sequence",
+          "!Not sequence",
+          "!Or sequence",
+          "!Condition scalar",
+          "!FindInMap sequence",
+          "!GetAtt scalar",
+          "!GetAtt sequence",
+          "!GetAZs scalar",
+          "!ImportValue scalar",
+          "!Join sequence",
+          "!Select sequence",
+          "!Split sequence",
+          "!Sub scalar",
+          "!Transform mapping",
+          "!Ref scalar"
+        ]
       },
-    "extensions": [
-      "ms-python.python",
-      "ms-python.vscode-pylance",
-      "aws-scripting-guy.cform",
-      "hashicorp.terraform",
-      "redhat.vscode-yaml",
-      "esbenp.prettier-vscode",
-      "kddejong.vscode-cfn-lint",
-      "hashicorp.terraform",
-      "yzhang.markdown-all-in-one",
-      "davidanson.vscode-markdownlint",
-      "rlnt.keep-a-changelog"
-    ]
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "aws-scripting-guy.cform",
+        "hashicorp.terraform",
+        "redhat.vscode-yaml",
+        "esbenp.prettier-vscode",
+        "kddejong.vscode-cfn-lint",
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint",
+        "rlnt.keep-a-changelog"
+      ]
+    }
   },
   "mounts": [
-		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
-	],
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+  ],
   "remoteUser": "vscode",
   "postAttachCommand": "pre-commit install --install-hooks"
 }
