@@ -24,3 +24,6 @@
     --md-hue: 225;
     --md-text-font: "FiraSans-Regular";
 }
+section#passage-text {
+  height: 30rem !important;
+}

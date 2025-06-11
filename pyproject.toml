@@ -19,9 +19,9 @@ mkdocs-git-revision-date-localized-plugin = ">=1.1.0"
 pymarkdownlnt = ">=0.9.8"
 invoke = ">=2.0.0"
 mkdocs-macros-plugin = ">=0.7.0"
-mkdocs-awesome-pages-plugin = ">=2.8.0"
 mkdocs-git-authors-plugin = ">=0.7.2"
 cfn-lint = ">=1.4.2"
+mkdocs-awesome-nav = "^3.1.2"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = ">=3.3.3"
