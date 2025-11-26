@@ -55,7 +55,7 @@ jobs:
       - name: set up python
         run: uv python install
       - name: Install dependencies
-        run: uv sync --extra dev --no-editable
+        run: uv sync --group dev --no-editable
       - name: cache pre-commit installs
         id: cache-precommit
         uses: actions/cache@v4
@@ -196,7 +196,7 @@ jobs:
       - name: set up python
         run: uv python install
       - name: Install dependencies
-        run: uv sync --extra dev --extra docs --no-editable
+        run: uv sync --group dev --no-editable
       - run: uv run mkdocs build --strict -f mkdocs.yml -d ${{ github.workspace }}/site/
       # - run: mkdocs build -f mkdocs.yml -d ${{ github.workspace }}/site/
 
