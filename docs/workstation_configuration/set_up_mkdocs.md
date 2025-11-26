@@ -53,7 +53,7 @@ A local environment should be configured to enable linting and building `mkdocs`
 7. Run `pymarkdownlnt -c .pymarkdown-linting-cfg.json scan --recurse docs` (referencing the correct path to the linting configuration file) or `make lint` to lint the markdown, and make changes where necessary.
 
     !!!info
-        Details for Markdown rules can be found [here](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md). If rules need to be ignored, update the linting configuration file.
+        Details for Markdown rules can be found [in the documentation](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md). If rules need to be ignored, update the linting configuration file.
 
 8. Run `mkdocs serve` or `make serve` to run the mkdocs site locally and confirm the changes.
 9. Push your changes to your branch on Github.
@@ -144,7 +144,7 @@ When you're finished with the changes, create a pull request (PR).
 - As you update your PR and apply changes, mark each conversation as resolved.[^resolved]
 - If you run into any merge issues, checkout the git tutorial on "merge conflicts" and other issues[^merge-conflicts].
 
-### Merge your PR!
+### Merge your PR
 
 Congratulations 🎉🎉 the team thanks you ✨.
 
