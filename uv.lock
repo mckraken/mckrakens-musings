@@ -839,7 +839,7 @@ requires-dist = [
     { name = "mkdocs-git-authors-plugin", specifier = ">=0.7.2" },
     { name = "mkdocs-git-revision-date-localized-plugin", specifier = ">=1.1.0" },
     { name = "mkdocs-macros-plugin", specifier = ">=0.7.0" },
-    { name = "mkdocs-material", specifier = ">=9.0.11" },
+    { name = "mkdocs-material", specifier = ">=9.7.0" },
 ]
 
 [package.metadata.requires-dev]

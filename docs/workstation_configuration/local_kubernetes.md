@@ -164,5 +164,3 @@ Now when you run get nodes you can see a control-plane and 3 worker nodes
 ```bash
 kubectl get nodes --context kind-kind
 ```
-
-![kind2](../../assets/images/kind2.png "kind2.png")

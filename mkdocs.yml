@@ -16,6 +16,11 @@ plugins:
   - macros
   - git-revision-date-localized
   - git-authors
+  - blog:
+      blog_dir: musings
+      blog_toc: true
+      post_url_format: "{date}/{slug}"
+      post_date_format: medium
   - tags:
       tags_slugify: !!python/object/apply:pymdownx.slugs.slugify
         kwds:
@@ -50,12 +55,6 @@ theme:
 
 extra_css:
   - assets/stylesheets/extra.css
-
-nav:
-  - ...
-  - General:
-      - Tag Index: general/tags.md
-      # - Contributing: general/contributing.md
 
 markdown_extensions:
   - admonition
