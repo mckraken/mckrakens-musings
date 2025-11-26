@@ -1,0 +1,34 @@
+[default]
+extend-ignore-re = [
+    "(?Rm)^.*(#|//)\\s*spellchecker:disable-line$",
+    "(?Rm)^.*(#|//|<!--)\\s*spellchecker:disable-line\\s*-->$",
+    "(?s)(#|//|<!--|--)\\s*spellchecker:off.*?\\n\\s*(#|//|<!--|--)\\s*spellchecker:on",
+    "(#|//|<!--)\\s*?spellchecker:ignore-next-line\\s*\\n.*",
+    "google_drive:[[:space:]][[:alnum:]]{10,}",
+    "policy\\-[0-9a-zA-Z]{10,}",
+    "snap\\-[0-9a-zA-Z]{10,}",
+    "ami\\-[0-9a-zA-Z]{10,}",
+    "vol\\-[0-9a-zA-Z]{10,}",
+    "m?i\\-[0-9a-zA-Z]{10,}",
+    "pb\\-[0-9a-zA-Z]{10,}",
+    "eni\\-[a-zA-Z0-9:]{10,}",
+    "[tvin]gw\\-[a-zA-Z0-9:]{10,}",
+    "subnet\\-[a-zA-Z0-9:]{10,}",
+    "vpc\\-[a-zA-Z0-9:]{10,}",
+    "sg\\-[a-zA-Z0-9:]{10,}",
+    "effect\\_[a-zA-Z0-9:]{10,}"
+]
+identifier-leading-digits = false
+extend-ignore-identifiers-re = [
+    "[0-9]+nd",
+    "[0-9]+st",
+    "[0-9]+th",
+    "[0-9]+rd",
+]
+
+[type.txt]
+extend-glob = ["*.txt"]
+check-file = false
+
+[files]
+extend-exclude = ["archive/*"]

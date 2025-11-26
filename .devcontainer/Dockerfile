@@ -41,7 +41,7 @@ RUN TFLINT_VERSION=$(curl --silent https://api.github.com/repos/terraform-linter
     mkdir -p ${HOME}/.local/bin && \
     mv tflint ${HOME}/.local/bin
 
-# Install rust compliler for checkov
+# Install rust compiler for checkov
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain stable -y
 ENV PATH="${PATH}:${HOME}/.cargo/bin"
 

@@ -1,14 +1,18 @@
 ---
-title: McKraken's Musings
+title: Welcome
 summary: Documentation Home Page
 cust_website: https://www.site.com/
 authors:
-    - Your Name Here
-date: 30-Feb-2023
-version: 0.1
+    - McKraken
+date: 30-Feb-2025
 mck:
     em: <em>
 
 ---
 
-## I'm Just a Bill...
+## mus·ing
+
+n.
+
+1. Contemplation; meditation.  
+2. A product of contemplation; a thought

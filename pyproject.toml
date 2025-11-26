@@ -1,44 +1,37 @@
 [project]
 name = "podc-docs"
-dynamic = ["version", "dependencies"]
-description = "Documentation Repository for Pod C"
-authors = [{name = "EE Pod C", email =  "ee-pod-c@rackspace.com"}]
-readme = "README.md"
-requires-python = ">=3.13"
-
-[tool.poetry]
 version = "0.1.0"
-package-mode = false
+description = "Documentation Repository for Pod C"
+authors = [{ name = "EE Pod C", email = "ee-pod-c@rackspace.com" }]
+requires-python = ">=3.13"
+readme = "README.md"
+dependencies = [
+    "boto3>=1.26.89",
+    "mkdocs>=1.5",
+    "mkdocs-material>=9.7.0",
+    "mkdocs-git-revision-date-localized-plugin>=1.1.0",
+    "invoke>=2.0.0",
+    "mkdocs-macros-plugin>=0.7.0",
+    "mkdocs-git-authors-plugin>=0.7.2",
+    "mkdocs-awesome-nav>=3.2.0",
+]
+[dependency-groups]
+dev = [
+    "pre-commit>=3.3.3",
+    "pylint>=3.3.4,<4",
+    "flake8>=7.1.1,<8",
+    "flake8-bugbear>=24.12.12,<25",
+    "flake8-builtins>=2.5.0,<3",
+    "flake8-comprehensions>=3.16.0,<4",
+    "flake8-docstrings>=1.7.0,<2",
+    "flake8-eradicate>=1.5.0,<2",
+    "flake8-isort>=6.1.2,<7",
+    "flake8-print>=5.0.0,<6",
+    "flake8-todos>=0.3.1,<0.4",
+    "flake8-use-fstring>=1.4,<2",
+    "ruff>=0.14.6",
+    "cfn-lint>=1.41.0",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.13, <4.0"
-boto3 = ">=1.26.89"
-mkdocs = ">=1.5"
-mkdocs-material = ">=9.0.11"
-mkdocs-git-revision-date-localized-plugin = ">=1.1.0"
-pymarkdownlnt = ">=0.9.8"
-invoke = ">=2.0.0"
-mkdocs-macros-plugin = ">=0.7.0"
-mkdocs-awesome-pages-plugin = ">=2.8.0"
-mkdocs-git-authors-plugin = ">=0.7.2"
-cfn-lint = ">=1.4.2"
-
-[tool.poetry.group.dev.dependencies]
-pre-commit = ">=3.3.3"
-poetry-plugin-export = ">=1.8"
-black = "^24.10.0"
-pylint = "^3.3.4"
-flake8 = "^7.1.1"
-flake8-bugbear = "^24.12.12"
-flake8-builtins = "^2.5.0"
-flake8-comprehensions = "^3.16.0"
-flake8-docstrings = "^1.7.0"
-flake8-eradicate = "^1.5.0"
-flake8-isort = "^6.1.2"
-flake8-print = "^5.0.0"
-flake8-todos = "^0.3.1"
-flake8-use-fstring = "^1.4"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.uv]
+package = false

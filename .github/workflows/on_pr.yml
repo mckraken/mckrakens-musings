@@ -1,0 +1,231 @@
+name: Lint, Format, and Best Practices Checks
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+jobs:
+  detect-change:
+    permissions:
+      pull-requests: read
+      contents: read
+    runs-on: ubuntu-latest
+    outputs:
+      docs_chng: ${{ steps.changed.outputs.docs_chng }}
+      nondocs_chng: ${{ steps.changed.outputs.nondocs_chng }}
+    steps:
+      - uses: dorny/paths-filter@v3
+        id: changed
+        with:
+          filters: |
+            docs_chng:
+              - 'docs/**'
+            nondocs_chng:
+              - '!docs/**'
+
+  precommit:
+    needs: detect-change
+    if: |
+      needs.detect-change.outputs.nondocs_chng == 'true' ||
+      needs.detect-change.outputs.docs_chng == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      # - uses: actions/create-github-app-token@v2
+      #   id: app-token
+      #   with:
+      #     # required
+      #     app-id: ${{ vars.DOCS_SITE_GET_TOKEN_APP_ID }}
+      #     private-key: ${{ secrets.DOCS_SITE_GET_TOKEN_PRIVATE_KEY }}
+      #     owner: ${{ github.repository_owner }}
+      - uses: actions/checkout@v4
+        with:
+          # token: ${{ steps.app-token.outputs.token }}
+          fetch-depth: 0
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+      - name: set up python
+        run: uv python install
+      - name: Install dependencies
+        run: uv sync --group dev --no-editable
+      - name: cache pre-commit installs
+        id: cache-precommit
+        uses: actions/cache@v4
+        with:
+          # yamllint disable rule:line-length
+          key: pre-commit-4|${{ env.pythonLocation }}|${{ hashFiles('.github/linters/.pre-commit-config-ghactions.yaml') }}
+          path: |
+            ~/.cache/pre-commit
+      - name: Run pre-commit
+        run: uv run pre-commit run -a -c .github/linters/.pre-commit-config-ghactions.yaml
+
+  megalinter:
+    needs: detect-change
+    if: ${{ needs.detect-change.outputs.nondocs_chng == 'true' }}
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: read
+      # To report GitHub Actions status checks
+      statuses: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        # - uses: actions/create-github-app-token@v2
+        #   id: app-token
+        #   with:
+        #     # required
+        #     app-id: ${{ vars.DOCS_SITE_GET_TOKEN_APP_ID }}
+        #     private-key: ${{ secrets.DOCS_SITE_GET_TOKEN_PRIVATE_KEY }}
+        #     owner: ${{ github.repository_owner }}
+        uses: actions/checkout@v4
+        with:
+          # token: ${{ steps.app-token.outputs.token }}
+          fetch-depth: 0
+
+      # yamllint disable rule:line-length
+      - name: MegaLinter
+        id: ml
+        # You can override MegaLinter flavor used to have faster performances
+        # More info at https://megalinter.io/flavors/
+        # uses: oxsecurity/megalinter/flavors/cupcake@v8
+        uses: mckraken/megalinter-custom-flavor-iac-md-py@v9.1.0
+        env:
+          # All available variables are described in documentation
+          # https://megalinter.io/configuration/
+          #
+          # Validates all source when push on main, else just the git diff with main.
+          # Override with true if you always want to lint all sources
+          VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+
+          # To report GitHub Actions status checks
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_COMMENT_REPORTER: false
+          GITHUB_STATUS_REPORTER: true
+          FLAVOR_SUGGESTIONS: true
+          FORMATTERS_DISABLE_ERRORS: false
+          MEGALINTER_CONFIG: ".github/linters/.mega-linter.yml"
+
+  fmt:
+    needs: detect-change
+    if: |
+      needs.detect-change.outputs.docs_chng == 'true'
+
+    runs-on: ubuntu-latest
+    # if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed') || github.event_name == 'workflow_dispatch'
+
+    steps:
+      # - uses: actions/create-github-app-token@v2
+      #   id: app-token
+      #   with:
+      #     # required
+      #     app-id: ${{ vars.DOCS_SITE_GET_TOKEN_APP_ID }}
+      #     private-key: ${{ secrets.DOCS_SITE_GET_TOKEN_PRIVATE_KEY }}
+      #     owner: ${{ github.repository_owner }}
+      - uses: actions/checkout@v4
+        with:
+          # token: ${{ steps.app-token.outputs.token }}
+          fetch-depth: 0
+      - name: markdownlint-cli2
+        uses: DavidAnson/markdownlint-cli2-action@v20
+        with:
+          globs: "docs/**/*.md"
+          config: .github/linters/.markdownlint.json
+
+  spellcheck:
+    needs: detect-change
+    if: |
+      needs.detect-change.outputs.docs_chng == 'true'
+    runs-on: ubuntu-latest
+    # if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed') || github.event_name == 'workflow_dispatch'
+
+    steps:
+      # - uses: actions/create-github-app-token@v2
+      #   id: app-token
+      #   with:
+      #     # required
+      #     app-id: ${{ vars.DOCS_SITE_GET_TOKEN_APP_ID }}
+      #     private-key: ${{ secrets.DOCS_SITE_GET_TOKEN_PRIVATE_KEY }}
+      #     owner: ${{ github.repository_owner }}
+      - uses: actions/checkout@v4
+        with:
+          # token: ${{ steps.app-token.outputs.token }}
+          fetch-depth: 0
+      - name: Spell Check with Typos
+        uses: crate-ci/typos@master
+        with:
+          config: .github/linters/.typos.toml
+          write_changes: false
+
+  build:
+    needs: [fmt]
+    # if: |
+    #   needs.detect-change.outputs.docs_chng == 'true'
+
+    runs-on: ubuntu-latest
+    # if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed') || github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: read # for actions/checkout to fetch code
+
+    steps:
+      # - uses: actions/create-github-app-token@v2
+      #   id: app-token
+      #   with:
+      #     # required
+      #     app-id: ${{ vars.DOCS_SITE_GET_TOKEN_APP_ID }}
+      #     private-key: ${{ secrets.DOCS_SITE_GET_TOKEN_PRIVATE_KEY }}
+      #     owner: ${{ github.repository_owner }}
+      - uses: actions/checkout@v4
+        with:
+          # token: ${{ steps.app-token.outputs.token }}
+          fetch-depth: 0
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+      - name: set up python
+        run: uv python install
+      - name: Install dependencies
+        run: uv sync --group dev --no-editable
+      - run: uv run mkdocs build --strict -f mkdocs.yml -d ${{ github.workspace }}/site/
+      # - run: mkdocs build -f mkdocs.yml -d ${{ github.workspace }}/site/
+
+  all-passed:
+    needs: [megalinter, precommit, detect-change, build, fmt]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: check all passed
+        run: |
+          docs_update_passed=${{ needs.detect-change.outputs.docs_chng == 'true' && needs.precommit.result == 'success' && needs.fmt.result == 'success' && needs.build.result == 'success' }}
+          local_nondocs_chng_passed=${{ needs.detect-change.outputs.nondocs_chng == 'true' && needs.detect-change.outputs.docs_chng == 'false' && needs.megalinter.result == 'success' }}
+          docs_only_passed=${{ needs.detect-change.outputs.nondocs_chng == 'false' && needs.detect-change.outputs.docs_chng == 'true' && needs.build.result == 'success' }}
+          local_and_docs_passed=${{ needs.detect-change.outputs.nondocs_chng == 'true' && needs.detect-change.outputs.docs_chng == 'true' && needs.megalinter.result == 'success' && needs.build.result == 'success' }}
+
+          echo "precommit result: ${{ needs.precommit.result == 'success' }}"
+          echo "megalinter result: ${{ needs.megalinter.result == 'success' }}"
+          echo "non-docs update: ${{ needs.detect-change.outputs.nondocs_chng }}"
+          echo "docs update: ${{ needs.detect-change.outputs.docs_chng }}"
+          if [[ $local_and_docs_passed == "true" ]]; then
+            echo "local and docs update passed"
+            exit 0
+          elif [[ $docs_only_passed == "true" ]]; then
+            echo "docs only update passed"
+            exit 0
+          elif [[ $local_nondocs_chng_passed == "true" ]]; then
+            echo "local without docs update passed"
+            exit 0
+          else
+            echo "something failed"
+            exit 1
+          fi

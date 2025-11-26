@@ -15,7 +15,7 @@ tags:
 
 ### Install Docker Engine for the Container Runtime
 
-I ran into an Ubuntu packaging [bug](https://bugs.launchpad.net/ubuntu/+source/docker.io/+bug/2029564) (also listed [here](https://github.com/moby/moby/issues/46161)) so recommend that the source Docker repo is used.  
+I ran into an Ubuntu packaging [bug](https://bugs.launchpad.net/ubuntu/+source/docker.io/+bug/2029564) (also listed [on Github](https://github.com/moby/moby/issues/46161)) so recommend that the source Docker repo is used.  
 
 !!! Note
     The following steps are excerpted from [https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)
@@ -164,5 +164,3 @@ Now when you run get nodes you can see a control-plane and 3 worker nodes
 ```bash
 kubectl get nodes --context kind-kind
 ```
-
-![kind2](../../assets/images/kind2.png "kind2.png")

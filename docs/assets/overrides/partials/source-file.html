@@ -1,0 +1,35 @@
+{% import "partials/language.html" as lang with context %}
+
+<!-- taken from
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
+
+<hr />
+<div class="md-source-file">
+  <small>
+    {% if page.meta.jira_tasks %}
+    JIRA task(s): {% for item in page.meta.jira_tasks %}
+    <a href="https://nbdevs.atlassian.net/browse/{{ item }}">{{ item }}</a>
+    {% endfor %}
+    <br />
+    {% endif %}
+    <!-- mkdocs-git-revision-date-localized-plugin -->
+    {% if page.meta.git_revision_date_localized %} {{
+    lang.t("source.file.date.updated") }}: {{
+    page.meta.git_revision_date_localized }} {% if
+    page.meta.git_creation_date_localized %}
+    <br />
+    {{ lang.t("source.file.date.created") }}: {{
+    page.meta.git_creation_date_localized }} {% endif %}
+
+    <!-- mkdocs-git-revision-date-plugin -->
+    {% elif page.meta.revision_date %} {{ lang.t("source.file.date.updated") }}:
+    {{ page.meta.revision_date }} {% endif %} {% if git_page_authors %}
+    <div class="md-source-date">
+      <small>
+        Authors: {{ git_page_authors | default('enable
+        mkdocs-git-authors-plugin') }}
+      </small>
+    </div>
+    {% endif %}
+  </small>
+</div>
