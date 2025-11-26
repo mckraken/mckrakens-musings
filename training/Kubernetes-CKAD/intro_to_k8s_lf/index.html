@@ -21,8 +21,11 @@
         <link rel="next" href="../training_materials/">
       
       
+        
+      
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
@@ -30,19 +33,21 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
   
     
+      
+      
     
   
   
-  <style>:root{--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4m-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4Z"/></svg>');}</style>
+  <style>:root{--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m14.6%2016.6%204.6-4.6-4.6-4.6L16%206l6%206-6%206zm-5.2%200L4.8%2012l4.6-4.6L8%206l-6%206%206%206z%22/%3E%3C/svg%3E');}</style>
 
 
 
@@ -60,13 +65,12 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-    
     
     
   </head>
@@ -81,9 +85,6 @@
     
     <body dir="ltr" data-md-color-scheme="elastic-engineering-light" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -110,12 +111,12 @@
     <a href="../../.." title="McKraken&#39;s Musings" class="md-header__button md-logo" aria-label="McKraken's Musings" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -140,20 +141,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="elastic-engineering-light" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="elastic-engineering-light" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
       </label>
     
   
@@ -161,38 +162,43 @@
       
     
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
           <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
           </a>
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -203,13 +209,14 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/mckraken/mckrakens-musings" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     mckraken/mckrakens-musings
@@ -245,7 +252,7 @@
     <a href="../../.." title="McKraken&#39;s Musings" class="md-nav__button md-logo" aria-label="McKraken's Musings" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     McKraken's Musings
@@ -255,7 +262,7 @@
       <a href="https://github.com/mckraken/mckrakens-musings" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     mckraken/mckrakens-musings
@@ -270,13 +277,21 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    McKraken's Musings
+    
+  
+    Welcome
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -288,98 +303,214 @@
       
   
   
-    
   
   
     
     
       
         
+          
+        
+      
+        
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-        
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../musings/" class="md-nav__link ">
+              
+  
   
   <span class="md-ellipsis">
-    Training
-  </span>
+    
+  
+    Musings
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Training
+            
+  
+    Musings
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
   
   
     
+  
+  
+  
+    
     
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
+    
+    
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
-        
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Kubernetes CKAD
+    
+  
+    Training
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_1">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Kubernetes CKAD
+            
+  
+    Training
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes CKAD
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Kubernetes CKAD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
   
   
   
@@ -387,9 +518,16 @@
       <a href="../exam_overview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Exam Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -403,6 +541,7 @@
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -414,9 +553,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction to Kubernetes (LFS158x) Notes
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -425,9 +571,16 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction to Kubernetes (LFS158x) Notes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -447,7 +600,11 @@
       
         <li class="md-nav__item">
   <a href="#chapter-8-building-blocks" class="md-nav__link">
-    Chapter 8 - Building Blocks
+    <span class="md-ellipsis">
+      
+        Chapter 8 - Building Blocks
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Chapter 8 - Building Blocks">
@@ -455,70 +612,110 @@
         
           <li class="md-nav__item">
   <a href="#nodes" class="md-nav__link">
-    Nodes
+    <span class="md-ellipsis">
+      
+        Nodes
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#namespaces" class="md-nav__link">
-    Namespaces
+    <span class="md-ellipsis">
+      
+        Namespaces
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#pods" class="md-nav__link">
-    Pods
+    <span class="md-ellipsis">
+      
+        Pods
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#labels" class="md-nav__link">
-    Labels
+    <span class="md-ellipsis">
+      
+        Labels
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#selectors" class="md-nav__link">
-    Selectors
+    <span class="md-ellipsis">
+      
+        Selectors
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#replication-controllers-deprecated" class="md-nav__link">
-    Replication Controllers (Deprecated)
+    <span class="md-ellipsis">
+      
+        Replication Controllers (Deprecated)
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#replicasets" class="md-nav__link">
-    ReplicaSets
+    <span class="md-ellipsis">
+      
+        ReplicaSets
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#deployments" class="md-nav__link">
-    Deployments
+    <span class="md-ellipsis">
+      
+        Deployments
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#daemonsets" class="md-nav__link">
-    DaemonSets
+    <span class="md-ellipsis">
+      
+        DaemonSets
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#services" class="md-nav__link">
-    Services
+    <span class="md-ellipsis">
+      
+        Services
+      
+    </span>
   </a>
   
 </li>
@@ -530,7 +727,11 @@
       
         <li class="md-nav__item">
   <a href="#chapter-9-authentication-authorization-admission-control" class="md-nav__link">
-    Chapter 9 - Authentication, Authorization, Admission Control
+    <span class="md-ellipsis">
+      
+        Chapter 9 - Authentication, Authorization, Admission Control
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Chapter 9 - Authentication, Authorization, Admission Control">
@@ -538,7 +739,11 @@
         
           <li class="md-nav__item">
   <a href="#authentication" class="md-nav__link">
-    Authentication
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Authentication">
@@ -546,14 +751,22 @@
         
           <li class="md-nav__item">
   <a href="#users" class="md-nav__link">
-    Users
+    <span class="md-ellipsis">
+      
+        Users
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authentication-modules" class="md-nav__link">
-    Authentication Modules
+    <span class="md-ellipsis">
+      
+        Authentication Modules
+      
+    </span>
   </a>
   
 </li>
@@ -565,21 +778,33 @@
         
           <li class="md-nav__item">
   <a href="#authorization" class="md-nav__link">
-    Authorization
+    <span class="md-ellipsis">
+      
+        Authorization
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#demo" class="md-nav__link">
-    Demo
+    <span class="md-ellipsis">
+      
+        Demo
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#admission-control" class="md-nav__link">
-    Admission Control
+    <span class="md-ellipsis">
+      
+        Admission Control
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Admission Control">
@@ -587,7 +812,11 @@
         
           <li class="md-nav__item">
   <a href="#what-are-they" class="md-nav__link">
-    What are they?
+    <span class="md-ellipsis">
+      
+        What are they?
+      
+    </span>
   </a>
   
 </li>
@@ -604,7 +833,11 @@
       
         <li class="md-nav__item">
   <a href="#chapter-10-services" class="md-nav__link">
-    Chapter 10 - Services
+    <span class="md-ellipsis">
+      
+        Chapter 10 - Services
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Chapter 10 - Services">
@@ -612,21 +845,33 @@
         
           <li class="md-nav__item">
   <a href="#kube-proxy" class="md-nav__link">
-    kube-proxy
+    <span class="md-ellipsis">
+      
+        kube-proxy
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#service-discovery" class="md-nav__link">
-    Service Discovery
+    <span class="md-ellipsis">
+      
+        Service Discovery
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#service-type" class="md-nav__link">
-    Service Type
+    <span class="md-ellipsis">
+      
+        Service Type
+      
+    </span>
   </a>
   
 </li>
@@ -650,378 +895,21 @@
   
   
   
+  
     <li class="md-nav__item">
       <a href="../training_materials/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     CKAD Training Resources
+  
+
+    
   </span>
   
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_4" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../application_deployment/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Application deployment
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_1_4">
-            <span class="md-nav__icon md-icon"></span>
-            Application deployment
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_5" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../application_design_and_build/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Application design and build
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_1_5">
-            <span class="md-nav__icon md-icon"></span>
-            Application design and build
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_6" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../application_environment_configuration_and_security/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Application environment configuration and security
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_1_6">
-            <span class="md-nav__icon md-icon"></span>
-            Application environment configuration and security
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_7" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../application_observability_and_maintenance/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Application observability and maintenance
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_1_7">
-            <span class="md-nav__icon md-icon"></span>
-            Application observability and maintenance
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_8" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../services_and_networking/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Services and networking
-  </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_1_8">
-            <span class="md-nav__icon md-icon"></span>
-            Services and networking
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Workstation configuration
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Workstation configuration
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../workstation_configuration/local_kubernetes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Local Kubernetes Environment - Kind
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../workstation_configuration/set_up_mkdocs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Documentation with mkdocs
-  </span>
   
 
       </a>
@@ -1036,9 +924,18 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
+  
   
   
   
@@ -1047,22 +944,32 @@
       
         
       
+        
+      
+    
+    
     
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
+          
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    General
+    
+  
+    Workstation configuration
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1071,7 +978,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            General
+            
+  
+    Workstation configuration
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1080,13 +991,49 @@
   
   
   
+  
     <li class="md-nav__item">
-      <a href="../../../general/tags/" class="md-nav__link">
+      <a href="../../../workstation_configuration/local_kubernetes/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Tag Index
+    
+  
+    Local Kubernetes Environment - Kind
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../workstation_configuration/set_up_mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation with mkdocs
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1128,7 +1075,11 @@
       
         <li class="md-nav__item">
   <a href="#chapter-8-building-blocks" class="md-nav__link">
-    Chapter 8 - Building Blocks
+    <span class="md-ellipsis">
+      
+        Chapter 8 - Building Blocks
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Chapter 8 - Building Blocks">
@@ -1136,70 +1087,110 @@
         
           <li class="md-nav__item">
   <a href="#nodes" class="md-nav__link">
-    Nodes
+    <span class="md-ellipsis">
+      
+        Nodes
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#namespaces" class="md-nav__link">
-    Namespaces
+    <span class="md-ellipsis">
+      
+        Namespaces
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#pods" class="md-nav__link">
-    Pods
+    <span class="md-ellipsis">
+      
+        Pods
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#labels" class="md-nav__link">
-    Labels
+    <span class="md-ellipsis">
+      
+        Labels
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#selectors" class="md-nav__link">
-    Selectors
+    <span class="md-ellipsis">
+      
+        Selectors
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#replication-controllers-deprecated" class="md-nav__link">
-    Replication Controllers (Deprecated)
+    <span class="md-ellipsis">
+      
+        Replication Controllers (Deprecated)
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#replicasets" class="md-nav__link">
-    ReplicaSets
+    <span class="md-ellipsis">
+      
+        ReplicaSets
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#deployments" class="md-nav__link">
-    Deployments
+    <span class="md-ellipsis">
+      
+        Deployments
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#daemonsets" class="md-nav__link">
-    DaemonSets
+    <span class="md-ellipsis">
+      
+        DaemonSets
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#services" class="md-nav__link">
-    Services
+    <span class="md-ellipsis">
+      
+        Services
+      
+    </span>
   </a>
   
 </li>
@@ -1211,7 +1202,11 @@
       
         <li class="md-nav__item">
   <a href="#chapter-9-authentication-authorization-admission-control" class="md-nav__link">
-    Chapter 9 - Authentication, Authorization, Admission Control
+    <span class="md-ellipsis">
+      
+        Chapter 9 - Authentication, Authorization, Admission Control
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Chapter 9 - Authentication, Authorization, Admission Control">
@@ -1219,7 +1214,11 @@
         
           <li class="md-nav__item">
   <a href="#authentication" class="md-nav__link">
-    Authentication
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Authentication">
@@ -1227,14 +1226,22 @@
         
           <li class="md-nav__item">
   <a href="#users" class="md-nav__link">
-    Users
+    <span class="md-ellipsis">
+      
+        Users
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#authentication-modules" class="md-nav__link">
-    Authentication Modules
+    <span class="md-ellipsis">
+      
+        Authentication Modules
+      
+    </span>
   </a>
   
 </li>
@@ -1246,21 +1253,33 @@
         
           <li class="md-nav__item">
   <a href="#authorization" class="md-nav__link">
-    Authorization
+    <span class="md-ellipsis">
+      
+        Authorization
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#demo" class="md-nav__link">
-    Demo
+    <span class="md-ellipsis">
+      
+        Demo
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#admission-control" class="md-nav__link">
-    Admission Control
+    <span class="md-ellipsis">
+      
+        Admission Control
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Admission Control">
@@ -1268,7 +1287,11 @@
         
           <li class="md-nav__item">
   <a href="#what-are-they" class="md-nav__link">
-    What are they?
+    <span class="md-ellipsis">
+      
+        What are they?
+      
+    </span>
   </a>
   
 </li>
@@ -1285,7 +1308,11 @@
       
         <li class="md-nav__item">
   <a href="#chapter-10-services" class="md-nav__link">
-    Chapter 10 - Services
+    <span class="md-ellipsis">
+      
+        Chapter 10 - Services
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Chapter 10 - Services">
@@ -1293,21 +1320,33 @@
         
           <li class="md-nav__item">
   <a href="#kube-proxy" class="md-nav__link">
-    kube-proxy
+    <span class="md-ellipsis">
+      
+        kube-proxy
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#service-discovery" class="md-nav__link">
-    Service Discovery
+    <span class="md-ellipsis">
+      
+        Service Discovery
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#service-type" class="md-nav__link">
-    Service Type
+    <span class="md-ellipsis">
+      
+        Service Type
+      
+    </span>
   </a>
   
 </li>
@@ -1327,25 +1366,28 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
+  
                   
-  
-<nav class="md-tags" >
-  
-    
-    
-    
-      <a href="../../../general/tags/#ckad" class="md-tag">ckad</a>
-    
-  
-</nav>
 
-
-  
-    <a href="https://github.com/mckraken/mckrakens-musings/edit/main/docs/training/Kubernetes-CKAD/intro_to_k8s_lf.md" title="Edit this page" class="md-content__button md-icon">
+  <nav class="md-tags" >
+    
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+      
+      
+      
+        <span class="md-tag">ckad</span>
+      
+    
+  </nav>
+
+
+  
+    <a href="https://github.com/mckraken/mckrakens-musings/edit/main/docs/training/Kubernetes-CKAD/intro_to_k8s_lf.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
   
   
@@ -1353,19 +1395,19 @@
 
   <h1>Introduction to Kubernetes (LFS158x) Notes</h1>
 
-<div><h2 id="chapter-8-building-blocks">Chapter 8 - Building Blocks<a class="headerlink" href="#chapter-8-building-blocks" title="Permanent link">¶</a></h2>
-<h3 id="nodes">Nodes<a class="headerlink" href="#nodes" title="Permanent link">¶</a></h3>
+<h2 id="chapter-8-building-blocks">Chapter 8 - Building Blocks<a class="headerlink" href="#chapter-8-building-blocks" title="Permanent link">&para;</a></h2>
+<h3 id="nodes">Nodes<a class="headerlink" href="#nodes" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Each node is managed by two k8s agents - kubelet &amp; kube-proxy as well as hosting a container runtime.</li>
 <li>Node identities are created and assigned during the cluster bootstrapping process. Minikube is using the default <strong>kubeadm</strong> bootstrapping tool, to initialize the control plane node during the <strong>init</strong> phase and grow the cluster by adding worker or control plane nodes with the <strong>join</strong> phase.</li>
 </ul>
-<h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">¶</a></h3>
+<h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>kube-system</code> is the default for k8s system resources.</li>
 <li>Create new namespaces with <code>kubectl create namespace new-namespace-name</code></li>
 <li>Resource quotas help users limit the overall resources consumed within Namespaces, while LimitRanges help limit the resources consumed by Containers and their enclosing objects in a Namespace. We will briefly cover quota management in a later chapter.</li>
 </ul>
-<h3 id="pods">Pods<a class="headerlink" href="#pods" title="Permanent link">¶</a></h3>
+<h3 id="pods">Pods<a class="headerlink" href="#pods" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>A Pod is a logical collection of one or more containers, enclosing and isolating them to ensure that they:</p>
@@ -1380,44 +1422,44 @@
 </li>
 <li>The <code>spec</code> is evaluated for scheduling and the <code>kubelet</code> of the node handles the running of the container with the container runtime.</li>
 </ul>
-<h3 id="labels">Labels<a class="headerlink" href="#labels" title="Permanent link">¶</a></h3>
+<h3 id="labels">Labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Key/Value pairs attached to objects for organization and selection</li>
 </ul>
-<h3 id="selectors">Selectors<a class="headerlink" href="#selectors" title="Permanent link">¶</a></h3>
+<h3 id="selectors">Selectors<a class="headerlink" href="#selectors" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Equality-Based Selectors</strong> allow filtering of objects based on Label keys and values. Matching is achieved using the =, == (equals, used interchangeably), or != (not equals) operators. For example, with <code>env==dev</code> or <code>env=dev</code> we are selecting the objects where the env Label key is set to value dev.</li>
 <li><strong>Set-Based Selectors</strong> allow filtering of objects based on a set of values. We can use in, notin operators for Label values, and exist/does not exist operators for Label keys. For example, with <code>env in (dev,qa)</code> we are selecting objects where the env Label is set to either dev or qa; with <code>!app</code> we select objects with no Label key app.</li>
 </ul>
-<h3 id="replication-controllers-deprecated">Replication Controllers (<em>Deprecated</em>)<a class="headerlink" href="#replication-controllers-deprecated" title="Permanent link">¶</a></h3>
+<h3 id="replication-controllers-deprecated">Replication Controllers (<em>Deprecated</em>)<a class="headerlink" href="#replication-controllers-deprecated" title="Permanent link">&para;</a></h3>
 <p>The default recommended controller is the <em>Deployment</em> which configures a <em>ReplicaSet</em> controller to manage application Pods' lifecycle.</p>
-<h3 id="replicasets">ReplicaSets<a class="headerlink" href="#replicasets" title="Permanent link">¶</a></h3>
+<h3 id="replicasets">ReplicaSets<a class="headerlink" href="#replicasets" title="Permanent link">&para;</a></h3>
 <p>apiVersion: apps/v1</p>
 <ul>
 <li>A ReplicaSet is, in part, the next-generation ReplicationController, as it implements the replication and self-healing aspects of the ReplicationController. ReplicaSets support both equality- and set-based Selectors, whereas ReplicationControllers only support equality-based Selectors.</li>
 <li>ReplicaSets can be used independently as Pod controllers but they only offer a limited set of features. A set of complementary features are provided by Deployments, the recommended controllers for the orchestration of Pods. Deployments manage the creation, deletion, and updates of Pods. A Deployment automatically creates a ReplicaSet, which then creates a Pod. There is no need to manage ReplicaSets and Pods separately, the Deployment will manage them on our behalf.</li>
 </ul>
-<h3 id="deployments">Deployments<a class="headerlink" href="#deployments" title="Permanent link">¶</a></h3>
+<h3 id="deployments">Deployments<a class="headerlink" href="#deployments" title="Permanent link">&para;</a></h3>
 <p>apiVersion: apps/v1</p>
 <ul>
 <li>It allows for seamless application updates and rollbacks, known as the default RollingUpdate strategy, through rollouts and rollbacks, and it directly manages its ReplicaSets for application scaling. It also supports a disruptive, less popular update strategy, known as Recreate.</li>
 <li>A rolling update is triggered when we update specific properties of the Pod Template for a deployment. While planned changes such as updating the container image, container port, volumes, and mounts would trigger a new Revision, other operations that are dynamic in nature, like scaling or labeling the deployment, do not trigger a rolling update, thus do not change the Revision number.</li>
 </ul>
-<h3 id="daemonsets">DaemonSets<a class="headerlink" href="#daemonsets" title="Permanent link">¶</a></h3>
+<h3 id="daemonsets">DaemonSets<a class="headerlink" href="#daemonsets" title="Permanent link">&para;</a></h3>
 <ul>
 <li>DaemonSets are operators designed to manage node agents. They resemble ReplicaSet and Deployment operators when managing multiple Pod replicas and application updates, but the DaemonSets present a distinct feature that enforces a single Pod replica to be placed per Node, on all the Nodes. In contrast, the ReplicaSet and Deployment operators by default have no control over the scheduling and placement of multiple Pod replicas on the same Node.</li>
 <li>Whenever a Node is added to the cluster, a Pod from a given DaemonSet is automatically placed on it.</li>
 <li>Similar definition file to ReplicaSet or Deployment, but no "replicas" key in the spec as it's on all nodes.</li>
 </ul>
-<h3 id="services">Services<a class="headerlink" href="#services" title="Permanent link">¶</a></h3>
-<h2 id="chapter-9-authentication-authorization-admission-control">Chapter 9 - Authentication, Authorization, Admission Control<a class="headerlink" href="#chapter-9-authentication-authorization-admission-control" title="Permanent link">¶</a></h2>
-<h3 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">¶</a></h3>
-<h4 id="users">Users<a class="headerlink" href="#users" title="Permanent link">¶</a></h4>
+<h3 id="services">Services<a class="headerlink" href="#services" title="Permanent link">&para;</a></h3>
+<h2 id="chapter-9-authentication-authorization-admission-control">Chapter 9 - Authentication, Authorization, Admission Control<a class="headerlink" href="#chapter-9-authentication-authorization-admission-control" title="Permanent link">&para;</a></h2>
+<h3 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h3>
+<h4 id="users">Users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Normal Users: Managed outside the cluster</li>
 <li>Service Accounts: In-cluster processes communicating with the API server.  Authenticate with Secrets and tied to a namespace.</li>
 </ul>
-<h4 id="authentication-modules">Authentication Modules<a class="headerlink" href="#authentication-modules" title="Permanent link">¶</a></h4>
+<h4 id="authentication-modules">Authentication Modules<a class="headerlink" href="#authentication-modules" title="Permanent link">&para;</a></h4>
 <ul>
 <li>X509 Client Certificates: through passing the <code>--client-ca-file=SOMEFILE</code> option to the API server</li>
 <li>Static Token File: through passing the <code>--token-auth-file=SOMEFILE</code> option to the API</li>
@@ -1428,20 +1470,20 @@
 <li>Authenticating Proxy: custom programming</li>
 </ul>
 <p>We can enable multiple authenticators, and the first module to successfully authenticate the request short-circuits the evaluation. To ensure successful user authentication, we should enable at least two methods: the service account tokens authenticator and one of the user authenticators.</p>
-<h3 id="authorization">Authorization<a class="headerlink" href="#authorization" title="Permanent link">¶</a></h3>
+<h3 id="authorization">Authorization<a class="headerlink" href="#authorization" title="Permanent link">&para;</a></h3>
 <p>Some of the API request attributes that are reviewed by Kubernetes include user, group, Resource, Namespace, or API group, to name a few. Next, these attributes are evaluated against policies. If the evaluation is successful, then the request is allowed, otherwise it is denied.</p>
 <ul>
 <li>Node authorization: special purpose for kubelet calls</li>
 <li>Attribute-Based Access Control (ABAC): combines policies with attributes. e.g.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">     </span><span class="nt">"apiVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abac.authorization.kubernetes.io/v1beta1"</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">     </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Policy"</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">     </span><span class="nt">"spec"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">         </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bob"</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">         </span><span class="nt">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lfs158"</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">         </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pods"</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">         </span><span class="nt">"readonly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">     </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abac.authorization.kubernetes.io/v1beta1&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">     </span><span class="nt">&quot;kind&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Policy&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">     </span><span class="nt">&quot;spec&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">         </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bob&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">         </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;lfs158&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">         </span><span class="nt">&quot;resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pods&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">         </span><span class="nt">&quot;readonly&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">     </span><span class="p">}</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
@@ -1461,9 +1503,9 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lfs158</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pod-reader</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">rules</span><span class="p">:</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">apiGroups</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">""</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># "" indicates the core API group</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nt">resources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"pods"</span><span class="p p-Indicator">]</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nt">verbs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"get"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"watch"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"list"</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">apiGroups</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;&quot;</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># &quot;&quot; indicates the core API group</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nt">resources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;pods&quot;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nt">verbs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;get&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;watch&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;list&quot;</span><span class="p p-Indicator">]</span>
 </code></pre></div>
 <p>A <code>Role</code> can be bound to users with the <code>RoleBinding</code> object:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
@@ -1482,13 +1524,13 @@
 </code></pre></div>
 </li>
 </ul>
-<h3 id="demo">Demo<a class="headerlink" href="#demo" title="Permanent link">¶</a></h3>
-<h3 id="admission-control">Admission Control<a class="headerlink" href="#admission-control" title="Permanent link">¶</a></h3>
+<h3 id="demo">Demo<a class="headerlink" href="#demo" title="Permanent link">&para;</a></h3>
+<h3 id="admission-control">Admission Control<a class="headerlink" href="#admission-control" title="Permanent link">&para;</a></h3>
 <p><a href="https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/">https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/</a></p>
-<h4 id="what-are-they">What are they?<a class="headerlink" href="#what-are-they" title="Permanent link">¶</a></h4>
+<h4 id="what-are-they">What are they?<a class="headerlink" href="#what-are-they" title="Permanent link">&para;</a></h4>
 <p>An admission controller is a piece of code that intercepts requests to the Kubernetes API server prior to persistence of the object, but after the request is authenticated and authorized.</p>
 <p>Admission controllers may be validating, mutating, or both. Mutating controllers may modify related objects to the requests they admit; validating controllers may not.</p>
-<h2 id="chapter-10-services">Chapter 10 - Services<a class="headerlink" href="#chapter-10-services" title="Permanent link">¶</a></h2>
+<h2 id="chapter-10-services">Chapter 10 - Services<a class="headerlink" href="#chapter-10-services" title="Permanent link">&para;</a></h2>
 <p>Kubernetes provides a higher-level abstraction (than IP addresses) called <strong>Service</strong>, which logically groups Pods and defines a policy to access them. This grouping is achieved via <strong>Labels</strong> and <strong>Selectors</strong>.  Labels and Selectors use a key-value pair format.</p>
 <p>Services can expose single Pods, ReplicaSets, Deployments, DaemonSets, and StatefulSets. When exposing the Pods managed by an operator, the Service's Selector may use the same label(s) as the operator.</p>
 <p>Example:</p>
@@ -1505,7 +1547,7 @@
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5000</span>
 </code></pre></div>
 <p>While the Service forwards traffic to Pods, we can select the targetPort on the Pod which receives the traffic. In our example, the frontend-svc Service receives requests from the user/client on port: 80 and then forwards these requests to one of the attached Pods on the targetPort: 5000. If the targetPort is not defined explicitly, then traffic will be forwarded to Pods on the port on which the Service receives traffic. It is very important to ensure that the value of the targetPort, which is 5000 in this example, matches the value of the containerPort property of the Pod spec section.</p>
-<h3 id="kube-proxy">kube-proxy<a class="headerlink" href="#kube-proxy" title="Permanent link">¶</a></h3>
+<h3 id="kube-proxy">kube-proxy<a class="headerlink" href="#kube-proxy" title="Permanent link">&para;</a></h3>
 <p>Each cluster node runs a daemon called kube-proxy, a node agent that watches the API server on the master node for the addition, updates, and removal of Services and endpoints. kube-proxy is responsible for implementing the Service configuration on behalf of an administrator or developer, in order to enable traffic routing to an exposed application running in Pods. In the example below, for each new Service, on each node, kube-proxy configures iptables rules to capture the traffic for its ClusterIP and forwards it to one of the Service's endpoints.</p>
 <p>The kube-proxy node agent together with the iptables implement the load-balancing mechanism of the Service when traffic is being routed to the application Endpoints. Due to restricting characteristics of the iptables this load-balancing is random by default.</p>
 <p>Traffic policies allow users to instruct the kube-proxy on the context of the traffic routing. The two options are Cluster and Local:</p>
@@ -1513,13 +1555,13 @@
 <li>The Cluster option allows kube-proxy to target all ready Endpoints of the Service in the load-balancing process.</li>
 <li>The Local option, however, isolates the load-balancing process to only include the Endpoints of the Service located on the same node as the requester Pod.</li>
 </ul>
-<h3 id="service-discovery">Service Discovery<a class="headerlink" href="#service-discovery" title="Permanent link">¶</a></h3>
+<h3 id="service-discovery">Service Discovery<a class="headerlink" href="#service-discovery" title="Permanent link">&para;</a></h3>
 <p>As Services are the primary mode of communication between containerized applications managed by Kubernetes, it is helpful to be able to discover them at runtime. Kubernetes supports two methods for discovering Services:</p>
 <ul>
 <li><strong>Environment Variables:</strong> As soon as the Pod starts on any worker node, the kubelet daemon running on that node adds a set of environment variables in the Pod for all active Services.</li>
 <li><strong>DNS:</strong> Kubernetes has an add-on for DNS, which creates a DNS record for each Service and its format is my-svc.my-namespace.svc.cluster.local. Services within the same Namespace find other Services just by their names.</li>
 </ul>
-<h3 id="service-type">Service Type<a class="headerlink" href="#service-type" title="Permanent link">¶</a></h3>
+<h3 id="service-type">Service Type<a class="headerlink" href="#service-type" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>ClusterIP</strong> is the default ServiceType. A Service receives a Virtual IP address, known as its ClusterIP. This Virtual IP address is used for communicating with the Service and is accessible only from within the cluster.</li>
 <li>The <strong>NodePort</strong> ServiceType, in addition to a ClusterIP, a high-port, dynamically picked from the default range 30000-32767, is mapped to the respective Service, from all the worker nodes.  The node port directs to the ClusterIP of the service.</li>
@@ -1542,15 +1584,26 @@
 </li>
 <li><strong>ExternalName</strong> is a special ServiceType that has no Selectors and does not define any endpoints. When accessed within the cluster, it returns a CNAME record of an externally configured Service.  The primary use case of this ServiceType is to make externally configured Services like my-database.example.com available to applications inside the cluster.</li>
 </ul>
-<p>A Service resource can expose multiple ports at the same time if required. Its configuration is flexible enough to allow for multiple groupings of ports to be defined in the manifest.</p></div>
+<p>A Service resource can expose multiple ports at the same time if required. Its configuration is flexible enough to allow for multiple groupings of ports to be defined in the manifest.</p>
 
-  <hr>
+
+<!-- taken from
+https://github.com/squidfunk/mkdocs-material/blob/master/src/partials/source-file.html -->
+
+<hr />
 <div class="md-source-file">
   <small>
     
-      Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 8, 2023</span>
-      
+    <!-- mkdocs-git-revision-date-localized-plugin -->
+     Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 8, 2023 03:52:58 UTC">September 8, 2023</span> 
+
+    <!-- mkdocs-git-revision-date-plugin -->
+     
+    <div class="md-source-date">
+      <small>
+        Authors: <span class='git-page-authors git-authors'><a href='mailto:mckraken@mckraken.net'>McKraken</a></span>
+      </small>
+    </div>
     
   </small>
 </div>
@@ -1558,19 +1611,35 @@
 
 
 
-
                 
+
+  <!-- Custom footer content
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        <div class="md-footer-copyright__highlight">
+          Built with ❤️ for daily spiritual growth through Proverbs
+        </div>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+    </div>
+  </div> -->
+
               </article>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Back to top
-          </button>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -1597,10 +1666,14 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "search.share", "content.code.annotate", "navigation.top", "navigation.indexes", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["search.highlight", "search.share", "content.code.annotate", "navigation.top", "navigation.indexes", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>

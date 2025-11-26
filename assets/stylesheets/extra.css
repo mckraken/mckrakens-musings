@@ -1,0 +1,71 @@
+/* Custom styles for Alexa Proverbs documentation */
+
+:root {
+  --md-primary-fg-color: #2E7D32;
+  --md-primary-fg-color--light: #4CAF50;
+  --md-primary-fg-color--dark: #1B5E20;
+  --md-accent-fg-color: #FF9800;
+}
+
+/* Custom color scheme for elastic-engineering-light */
+[data-md-color-scheme="elastic-engineering-light"] {
+  --md-primary-fg-color: #2E7D32;
+  --md-primary-fg-color--light: #4CAF50;
+  --md-primary-fg-color--dark: #1B5E20;
+  --md-accent-fg-color: #FF9800;
+  --md-default-bg-color: #FFFFFF;
+  --md-default-fg-color: #212121;
+}
+
+/* Code block styling */
+.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #408080; font-style: italic }
+.highlight .k { color: #008000; font-weight: bold }
+.highlight .o { color: #666666 }
+.highlight .cm { color: #408080; font-style: italic }
+.highlight .cp { color: #BC7A00 }
+.highlight .c1 { color: #408080; font-style: italic }
+.highlight .cs { color: #408080; font-style: italic }
+
+/* Custom admonition styles */
+.md-typeset .admonition.quote {
+  border-color: var(--md-accent-fg-color);
+}
+
+.md-typeset .admonition.quote > .admonition-title {
+  background-color: var(--md-accent-fg-color);
+  color: white;
+}
+
+/* Table styling */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.1rem;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color--light);
+  color: white;
+  font-weight: 600;
+}
+
+/* Navigation styling */
+.md-nav__title {
+  font-weight: 600;
+}
+
+/* Footer customization */
+.md-footer {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+/* Custom button styling */
+.md-button {
+  border-radius: 0.2rem;
+  transition: all 0.2s ease;
+}
+
+.md-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

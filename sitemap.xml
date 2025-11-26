@@ -2,67 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://pages.github.io/mckraken/mckrakens-musings/</loc>
-         <lastmod>2023-09-13</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-26</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.io/mckraken/mckrakens-musings/general/tags/</loc>
-         <lastmod>2023-09-13</lastmod>
-         <changefreq>daily</changefreq>
+         <loc>https://pages.github.io/mckraken/mckrakens-musings/musings/</loc>
+         <lastmod>2025-11-26</lastmod>
     </url>
     <url>
          <loc>https://pages.github.io/mckraken/mckrakens-musings/training/Kubernetes-CKAD/exam_overview/</loc>
-         <lastmod>2023-09-13</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-26</lastmod>
     </url>
     <url>
          <loc>https://pages.github.io/mckraken/mckrakens-musings/training/Kubernetes-CKAD/intro_to_k8s_lf/</loc>
-         <lastmod>2023-09-13</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-26</lastmod>
     </url>
     <url>
          <loc>https://pages.github.io/mckraken/mckrakens-musings/training/Kubernetes-CKAD/training_materials/</loc>
-         <lastmod>2023-09-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://pages.github.io/mckraken/mckrakens-musings/training/Kubernetes-CKAD/application_deployment/</loc>
-         <lastmod>2023-09-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://pages.github.io/mckraken/mckrakens-musings/training/Kubernetes-CKAD/application_design_and_build/</loc>
-         <lastmod>2023-09-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://pages.github.io/mckraken/mckrakens-musings/training/Kubernetes-CKAD/application_environment_configuration_and_security/</loc>
-         <lastmod>2023-09-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://pages.github.io/mckraken/mckrakens-musings/training/Kubernetes-CKAD/application_observability_and_maintenance/</loc>
-         <lastmod>2023-09-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://pages.github.io/mckraken/mckrakens-musings/training/Kubernetes-CKAD/services_and_networking/</loc>
-         <lastmod>2023-09-13</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-26</lastmod>
     </url>
     <url>
          <loc>https://pages.github.io/mckraken/mckrakens-musings/workstation_configuration/local_kubernetes/</loc>
-         <lastmod>2023-09-13</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-26</lastmod>
     </url>
     <url>
          <loc>https://pages.github.io/mckraken/mckrakens-musings/workstation_configuration/set_up_mkdocs/</loc>
-         <lastmod>2023-09-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://pages.github.io/mckraken/mckrakens-musings/general/tags/</loc>
-         <lastmod>2023-09-13</lastmod>
-         <changefreq>daily</changefreq>
+         <lastmod>2025-11-26</lastmod>
     </url>
 </urlset>
