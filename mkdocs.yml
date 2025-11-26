@@ -12,7 +12,7 @@ remote_branch: gh-pages
 
 plugins:
   - search
-  - awesome-pages
+  - awesome-nav
   - macros
   - git-revision-date-localized
   - git-authors
@@ -24,7 +24,7 @@ plugins:
 
 theme:
   name: material
-  custom_dir: docs/overrides
+  custom_dir: docs/assets/overrides
   language: en
   features:
     - search.highlight
@@ -49,7 +49,7 @@ theme:
       quote: material/code-tags
 
 extra_css:
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
 
 nav:
   - ...
